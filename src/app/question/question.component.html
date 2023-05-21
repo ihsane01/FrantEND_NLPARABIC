@@ -1,0 +1,36 @@
+
+<div class="container">
+
+  <div id="wrapper">
+ 
+        <h1  >{{this.buttonValue}}</h1>
+        <h1 *ngIf="maVariable" >{{this.question}}</h1>
+
+    
+</div>
+  <div  dir="rtl" class="form__group field">
+
+      <input name="hello" type="input" class="form__field" [(ngModel)]="response" placeholder="Name" name="name" id='name' required />
+      <label  for="name" class="form__label">الاجابة</label>
+    </div>
+
+
+  <button (click)="fetchData()">
+    تقييم
+    <span class="first"></span>
+    <span class="second"></span>
+    <span class="third"></span>
+    <span class="fourth"></span>
+  </button>
+   
+  <div  [class.red-text]="score == 0" [class.blue-text]="score == 1"  [class.green-text]="score == 2"  *ngIf="maVariable" class="deconstructed">
+    SCORE {{this.score}}/2
+    <div>SCORE {{this.score}}/2</div>
+    <div>SCORE {{this.score}}/2</div>
+    <div>SCORE {{this.score}}/2</div>
+    <div>SCORE {{this.score}}/2</div>
+  </div>
+
+
+  
+</div>

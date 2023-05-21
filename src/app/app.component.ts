@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from './service/data.service';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Frant_MLproject';
+  hello : string='';
+
+  constructor(private DataService: DataService) {
+  }
+ 
 }
+
+ 
